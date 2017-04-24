@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kodowanie.CodingViewController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <items>
+            <Label text="(" />
+            <TextField fx:id="n_field" prefHeight="31.0" prefWidth="46.0" text="12" />
+            <Label text="," />
+            <TextField fx:id="k_field" prefHeight="31.0" prefWidth="46.0" text="4" />
+            <Label text=")" />
+            <Label text="Wiel. gen. (bity): " />
+            <TextField fx:id="gen_field" text="100010001" />
+            <Button fx:id="ok_body" mnemonicParsing="false" text="Ok" />
+         </items>
+      </ToolBar>
+   </top>
+   <center>
+      <TabPane fx:id="tab_pane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="coding_tab" text="Kodowanie">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <bottom>
+                        <Button fx:id="gen_code_words" disable="true" mnemonicParsing="false" text="Generuj słowa kodowe" BorderPane.alignment="CENTER" />
+                     </bottom>
+                     <center>
+                        <TextArea fx:id="result_field_1" editable="false" prefHeight="200.0" prefWidth="200.0" text="Utwórz macierz kodującą G aby móc generować słowa kodowe.&#10;" BorderPane.alignment="CENTER" />
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+          <Tab text="Dekodowanie">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <TextField fx:id="code_word_field" promptText="Podaj słowo kodowe.." BorderPane.alignment="CENTER" />
+                     </top>
+                     <center>
+                        <TextArea fx:id="result_field_2" editable="false" prefHeight="200.0" prefWidth="200.0" text="Utwórz macierz dekodującą H aby sprawdzić poprawność podanego słowa.&#10;" BorderPane.alignment="CENTER" />
+                     </center>
+                     <bottom>
+                        <Button fx:id="check_btn" disable="true" mnemonicParsing="false" text="Sprawdź poprawność" BorderPane.alignment="CENTER" />
+                     </bottom>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <bottom>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <items>
+                  <Button fx:id="gen_matrixG" defaultButton="true" mnemonicParsing="false" text="Generuj macierz kodującą G" />
+                  <Button fx:id="gen_matrixH" disable="true" mnemonicParsing="false" text="Generuj macierz dekodującą H" />
+               </items>
+            </ToolBar>
+         </center>
+         <right>
+            <ToolBar prefHeight="45.0" prefWidth="126.0" BorderPane.alignment="CENTER">
+              <items>
+                <Button fx:id="about" mnemonicParsing="false" text="O programie" />
+              </items>
+            </ToolBar>
+         </right>
+      </BorderPane>
+   </bottom>
+</BorderPane>

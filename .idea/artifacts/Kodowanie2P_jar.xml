@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Kodowanie2P:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kodowanie2P_jar</output-path>
+    <root id="archive" name="Kodowanie2P.jar">
+      <element id="module-output" name="Kodowanie2P" />
+    </root>
+  </artifact>
+</component>
